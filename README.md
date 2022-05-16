@@ -16,7 +16,7 @@ Now release version is 1.0.01
 
 It provides:
 
-- Newly and powerful Vision Transformer's Backbones(all with pretrained weights) simpler usage
+- Newly and powerful Vision Transformer's Backbones (all with pretrained weights) simple usage
 - You can build your own model quickly based on Vision Transformer backbone using **vitbackbone**
 - More ViT backbones are coming soon......:cupid:
 
@@ -26,7 +26,7 @@ This repository contains an PyTorch reimplementation of serval bacbones:
 
 > Format means (\`Pretrained Dataset Name\`) # img_size = \`resolution\`
 
-- **Swin-Transformer **
+- **Swin-Transformer**
 - - **swin_transformer_tiny** (ImageNet) # img_size = 224
   - **swin_transformer_tiny** (ImageNet+ADE20K) # img_size = 512
   - **swin_transformer_small** (ImageNet) # img_size=224
@@ -65,7 +65,7 @@ pip install vitbackbone
   from vitbackbone import vitmodels as vitb
   
   # Using a local weights package
-  vit_models = vitb('/home/xxx/weights') 
+  models = vitb('/home/xxx/weights') 
   ```
 
   
@@ -92,7 +92,7 @@ pip install vitbackbone
   from vitbackbone import vitmodels as vitb
   
   # Using a local weights package
-  vit_models = vitb('ylab') 
+  models = vitb('ylab') 
   ```
 
   
@@ -104,7 +104,7 @@ import torch
 from vitbackbone import vitmodels as vitb
 
 # Using a local weights package
-vit_models = vitb('/home/xxx/weights') 
+models = vitb('/home/xxx/weights') 
 
 # [1] Using ImageNet pretrained weight
 model = models.swin_transformer_tiny(pretrained = True, pretrain_type = 0)
@@ -132,7 +132,7 @@ import torch
 from vitbackbone import vitmodels as vitb
 
 # Using a local weights package
-vit_models = vitb('ylab') 
+models = vitb('ylab') 
 
 # [1] Using ImageNet pretrained weight
 model = models.swin_transformer_tiny(pretrained = True, pretrain_type = 0)
